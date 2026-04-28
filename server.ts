@@ -9,7 +9,7 @@ import fs from 'fs';
 
 // --- INITIALIZE EXPRESS ---
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 8080;
 
 app.use(cors());
 app.use(express.json());
