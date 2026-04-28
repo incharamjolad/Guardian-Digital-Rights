@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=Syne:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-bg: var(--base-brand-bg);
+  --color-brand-bg2: var(--base-brand-bg2);
+  --color-brand-bg3: var(--base-brand-bg3);
+  --color-brand-border: var(--base-brand-border);
+  --color-brand-border2: var(--base-brand-border2);
+  --color-brand-text: var(--base-brand-text);
+  --color-brand-muted: var(--base-brand-muted);
+  --color-brand-accent: var(--base-brand-accent);
+  --color-brand-accent2: var(--base-brand-accent2);
+  --color-brand-accent3: var(--base-brand-accent3);
+  --color-brand-accent4: var(--base-brand-accent4);
+}
+
+:root {
+  /* LIGHT THEME VARIABLES */
+  --base-brand-bg: #f5f6fa;
+  --base-brand-bg2: #ffffff;
+  --base-brand-bg3: #e4e7ed;
+  --base-brand-border: rgba(0,0,0,0.08);
+  --base-brand-border2: rgba(0,0,0,0.14);
+  --base-brand-text: #0a0a0f;
+  --base-brand-muted: #575668;
+  --base-brand-accent: #6455eb; 
+  --base-brand-accent2: #24b081;
+  --base-brand-accent3: #d14d48;
+  --base-brand-accent4: #c98010;
+}
+
+:root.dark {
+  /* DARK THEME VARIABLES */
+  --base-brand-bg: #0a0a0f;
+  --base-brand-bg2: #111118;
+  --base-brand-bg3: #1a1a24;
+  --base-brand-border: rgba(255,255,255,0.08);
+  --base-brand-border2: rgba(255,255,255,0.14);
+  --base-brand-text: #f0eff8;
+  --base-brand-muted: #8b8a9e;
+  --base-brand-accent: #7c6ef7;
+  --base-brand-accent2: #4fd1a5;
+  --base-brand-accent3: #f7726e;
+  --base-brand-accent4: #f5a623;
+}
+
+body {
+  background-color: var(--base-brand-bg);
+  color: var(--base-brand-text);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Google Translate Widget Overrides */
+.goog-te-banner-frame.skiptranslate, .skiptranslate > iframe.VIpgJd-Zvi9od-ORHb-OEVmcd {
+    display: none !important;
+} 
+body {
+    top: 0px !important; 
+}
+#goog-gt-tt {
+    display: none !important;
+}
+.goog-tooltip {
+    display: none !important;
+}
+.goog-tooltip:hover {
+    display: none !important;
+}
+.goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important; 
+    box-shadow: none !important;
+}
