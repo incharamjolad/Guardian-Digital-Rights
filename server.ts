@@ -303,7 +303,7 @@ ${name}
 
 // --- CLIENT SERVER LOGIC (Vite Middleware) ---
 async function startServer() {
-  if (process.env.NODE_ENV !== "production") {
+  if (false) {
     const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
       server: { middlewareMode: true },
